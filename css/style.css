@@ -1,0 +1,39 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,700;1,400&display=swap');
+
+body,button{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+:root{
+    --offcanvas-width:270px;
+    --topNavbarHeight:56px;
+}
+.sidebar-nav{
+width: var(--offcanvas-width);
+}
+
+.sidebar-link{
+    display: flex;
+    align-items: center;
+}
+.sidebar-link .right-icon{
+    display: flex;
+}
+@media (min-width:992px){
+    body{
+        overflow: auto !important;
+    }
+    .offcanvas-backdrop::before{
+        display: none;
+
+    }
+    .sidebar-nav{
+        transform: none;
+        visibility: visible !important;
+        top: var(--topNavbarHeight);
+        height: calc(100% - var(--topNavbarHeight));
+    }
+    main{
+        margin-left: var(--offcanvas-width);
+    }
+}
