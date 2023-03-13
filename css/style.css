@@ -10,13 +10,19 @@ body,button{
 }
 
 .sidebar-nav{
-    width: var(--offcanvas-width);
+    width: var(--offcanvas-width) !important; 
 }
 @media (min-width:992px) {
+    body{
+        overflow: auto !important;
+    }
+    .offcanvas-backdrop::before{
+        display: none;
+    }
     .sidebar-nav{
-        transform: none;
+        transform: none !important;
         visibility: visible !important;
-        top: var(--topNavbarHeight);
-        height: calc(100% - var(--topNavbarHeight));
+        top: var(--topNavbarHeight) !important;
+        height: calc(100% - var(--topNavbarHeight)) ;
     }
 }
